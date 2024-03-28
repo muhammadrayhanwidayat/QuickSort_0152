@@ -8,7 +8,7 @@ int n;
 
 void input() {
 	while (true) {
-		cout << "masukan panjan elemen array: ";
+		cout << "masukan panjang elemen array: ";
 		cin >> n;
 
 		if (n <= 20)
@@ -49,7 +49,7 @@ void q_short(int low, int high) {
 	while (i <= j)			//step 10
 	{
 		//search for an element less than or equal to pivot
-		while ((arr[j] > pivot) && (j >= low)) {//step 5
+		while ((arr[i] < pivot) && (i <= low)) {//step 5
 			i++;
 			cmp_count++;
 		}
@@ -83,7 +83,7 @@ void display() {
 	cout << "---------------------" << endl;
 
 	for (int i = 0; i < n; i++) {
-		cout << arr[1] << " ";
+		cout << arr[i] << " ";
 	}
 
 	cout << "\n\nNumber of comparasions: " << cmp_count << endl;
